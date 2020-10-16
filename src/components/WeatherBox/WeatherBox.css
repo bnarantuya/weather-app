@@ -1,0 +1,35 @@
+.weatherBox {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  padding: 8px;
+
+  min-width: 412px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherBox:hover {
+  outline: 1px solid #cecece;
+}
+
+.weatherBox .title {
+  font-weight: 300;
+  font-size: 32px;
+  font-family: 'Roboto';
+}
+
+.weatherBox .temp {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.weatherBox .sub-info {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 28% 35% 36%;
+}
+
+.weatherBox .sub-info p {
+  justify-self: center;
+}

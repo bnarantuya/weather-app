@@ -1,0 +1,5 @@
+
+.forecastContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

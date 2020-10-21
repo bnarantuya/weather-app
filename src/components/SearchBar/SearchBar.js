@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import './SearchBar.css'
-import { getCurrentWeatherData, getOneCall } from '../FetchCalls'
+import { getCurrentWeatherData, getOneCall } from '../api/FetchCalls'
 function SearchBar({ setData, setForecast, setError }) {
   const [query, setQuery] = useState("")
   const fetchData = async (e) => {

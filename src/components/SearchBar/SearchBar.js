@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import './SearchBar.css'
 import { getCurrentWeatherData, getOneCall } from '../FetchCalls'
 function SearchBar({ setData, setForecast, setError }) {
   const [query, setQuery] = useState("")
@@ -16,7 +17,7 @@ function SearchBar({ setData, setForecast, setError }) {
       <label htmlFor="cityInput">Enter City: </label>
       <input
         id="cityInput"
-        type="text"
+        type="search"
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={(e) => fetchData(e)}
         placeholder="ex: Chicago"

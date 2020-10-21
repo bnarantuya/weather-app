@@ -9,16 +9,18 @@ function App() {
   const [forecast, setForecast] = useState({})
   return (
     <div className="App">
-      <SearchBar
-        setData={setData}
-        setForecast={setForecast}
-        setError={setError} />
-      {data.base && (
-        <WeatherBox data={data} />
-      )}
-      {!error && (
-        <ForecastContainer forecast={forecast} />
-      )}
+      <div className="container">
+        <SearchBar
+          setData={setData}
+          setForecast={setForecast}
+          setError={setError} />
+        {data.base && (
+          <WeatherBox data={data} />
+        )}
+        {!error && (
+          <ForecastContainer forecast={forecast} />
+        )}
+      </div>
     </div>
   )
 }

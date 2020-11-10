@@ -1,0 +1,10 @@
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherHistory {
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+}

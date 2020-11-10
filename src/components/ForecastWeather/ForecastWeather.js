@@ -1,9 +1,8 @@
 import React from 'react'
 import './ForecastWeather.css'
 function ForecastWeather({ forecast }) {
-  console.log(forecast)
   const daytime = new Date(forecast.dt * 1000)
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  const days = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   const getDay = daytime.getDay()
   const dateMonth = daytime.getDate()
   return (

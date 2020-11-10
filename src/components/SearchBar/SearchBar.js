@@ -7,10 +7,13 @@ function SearchBar({ setData, setForecast, setError }) {
     if (e.key === 'Enter') {
       const data = await getCurrentWeatherData(query)
       const oneCall = await getOneCall(data.coord.lon, data.coord.lat)
-      setData(data)
-      setForecast(oneCall)
+      setData({daily: data, forecast: oneCall})
       setError(false)
     }
+  }
+
+  const updateCache = () => {
+
   }
   return (
     <div className="searchBar">

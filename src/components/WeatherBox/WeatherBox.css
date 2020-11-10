@@ -26,8 +26,8 @@
 
 .weatherBox .sub-info {
   width: 80%;
-  display: grid;
-  grid-template-columns: 30% 34% 34%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .weatherBox .sub-info p {

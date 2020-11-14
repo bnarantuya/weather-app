@@ -10,7 +10,6 @@ export const getCurrentWeatherData = async (query) => {
         APPID: apiKey,
       },
     })
-  console.log(data)
   return data
 }
 
@@ -25,6 +24,5 @@ export const getOneCall = async (lon, lat) => {
         APPID: apiKey
       },
     })
-  console.log(data)
   return data
 }

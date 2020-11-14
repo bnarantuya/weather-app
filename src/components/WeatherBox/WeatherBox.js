@@ -1,18 +1,12 @@
 import React from 'react'
+import { addToStorage, getStorage } from '../api/StorageHandler'
 import './WeatherBox.css'
-function WeatherBox({ data }) {
-	console.log(data)
+
+function WeatherBox({ data, setStorage}) {
 	const addFavorites = function () {
-		const cache = localStorage.getItem('cities')
-		if (cache) {
-			const cities = JSON.parse(cache)
-			const fCache = [...cities, data]
-			localStorage.setItem("cities", JSON.stringify(fCache))
-		}
-		else {
-			const fCache = [data]
-			localStorage.setItem("cities", JSON.stringify(fCache))
-		}
+		const storage = getStorage()
+		setStorage([...storage, data])
+		addToStorage(data)
 	}
 	return (
 		<div className='weatherBox'>

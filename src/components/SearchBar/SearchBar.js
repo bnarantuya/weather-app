@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './SearchBar.css'
 import { getCurrentWeatherData, getOneCall } from '../api/FetchCalls'
-function SearchBar({ setData, setForecast, setError }) {
+function SearchBar({ setData, setError }) {
   const [query, setQuery] = useState("")
   const fetchData = async (e) => {
     if (e.key === 'Enter') {
@@ -12,9 +12,6 @@ function SearchBar({ setData, setForecast, setError }) {
     }
   }
 
-  const updateCache = () => {
-
-  }
   return (
     <div className="searchBar">
       <label htmlFor="cityInput">Enter City: </label>

@@ -1,6 +1,7 @@
 
 .searchBar {
   font-size: 18px;
+  padding: 16px;
 }
 
 .searchBar #cityInput {

@@ -4,7 +4,20 @@
 }
 
 .weatherHistory {
-  display: grid;
-  margin-bottom: 20px;
-  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+  /* display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px; */
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #cecece;
+  padding: 10px;
+}
+
+.weatherTitle {
+  width: 120px;
+  align-self: center;
+  text-align: center;
+}
+
+.weatherHistory:hover {
+  background-color: #f5f5f5;
 }

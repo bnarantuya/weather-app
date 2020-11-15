@@ -5,7 +5,6 @@ export const addToStorage = (el) => {
   localStorage.setItem('city', JSON.stringify(storage))
 }
 
-
 export const removeFromStorage = (index) => {
   const storage = getStorage()
   localStorage.setItem('city', JSON.stringify(storage.filter((c, i) => i !==index)))

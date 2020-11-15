@@ -24,6 +24,5 @@ export const getOneCall = async (lon, lat) => {
         APPID: apiKey
       },
     })
-    console.log(data)
   return data
 }

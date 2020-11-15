@@ -4,19 +4,21 @@ import SearchBar from './components/SearchBar/SearchBar'
 import WeatherBox from './components/WeatherBox/WeatherBox'
 import ForecastContainer from './components/ForecastContainer/ForcastContainer'
 import WeatherContainer from './components/HistoryContainer/WeatherContainer'
-import { updateCache } from './components/api/ForecastData'
-// import { getStorage } from './components/api/StorageHandler'
+// import { updateCache } from './components/api/ForecastData'
+import { getStorage } from './components/api/StorageHandler'
 function App() {
   const [data, setData] = useState([])
   const [storage, setStorage] = useState([])
   const [error, setError] = useState(true)
 
   useEffect(() => {
-    async function getData() {
-      const res = await updateCache()
-      setStorage(res)
-    }
-    getData()
+    // async function getData() {
+    //   const res = await updateCache()
+    //   setStorage(res)
+    // }
+    // getData()
+    const cache = getStorage()
+    setStorage(cache)
   }, [])
   return (
     <div className="App">

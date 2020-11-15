@@ -1,8 +1,8 @@
 import React from 'react'
-import { addToStorage, getStorage } from '../api/StorageHandler'
+import { addToStorage, getStorage, isExists } from '../api/StorageHandler'
 import './WeatherBox.css'
 
-function WeatherBox({ data, setStorage}) {
+function WeatherBox({ data, setStorage }) {
 	const addFavorites = function () {
 		const storage = getStorage()
 		setStorage([...storage, data])
@@ -17,9 +17,11 @@ function WeatherBox({ data, setStorage}) {
 				<p>Feels like {Math.round(data.forecast.daily[0].feels_like.day)}°</p>
 				<p>Wind {data.forecast.daily[0].wind_speed} m/s</p>
 			</div>
-			<button className="addFavorites" onClick={addFavorites}>
-				+Add to Favorites
-			</button>
+			{isExists(data) &&
+				<button className="addFavorites" onClick={addFavorites}>
+					+Add to Favorites
+				</button>
+			}
 		</div>
 	)
 }

@@ -9,7 +9,6 @@ import { updateCache } from './components/api/ForecastData'
 function App() {
   const [data, setData] = useState([])
   const [storage, setStorage] = useState([])
-  const [error, setError] = useState(true)
 
   useEffect(() => {
     const res = updateCache()
@@ -19,21 +18,18 @@ function App() {
     <div className="App">
       <div className="container">
         <SearchBar
-          setData={setData}
-          setError={setError} />
-        {!error && (
-          <>
-            <WeatherBox data={data} setStorage={setStorage} />
-            <ForecastContainer data={data} city={'Temp city'} />
-          </>
-        )}
+          setData={setData} />
         {storage.length > 0 &&
-          <WeatherContainer
-            data={storage}
-            setData={setData}
-            setError={setError}
-            setStorage={setStorage}
-          />}
+          <>
+            <WeatherBox data={data} setStorage={setStorage} dummyData={storage[storage.length-1]}/>
+            <ForecastContainer data={data} dummyData={storage[storage.length-1]}/>
+            <WeatherContainer
+              data={storage}
+              setData={setData}
+              setStorage={setStorage}
+            />
+          </>
+        }
       </div>
     </div>
   )

@@ -1,8 +1,12 @@
+
 .App {
+  height: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, #1c5869,#3f7382,#558490,#52757d,#577882,#4c8392,#1c5869);
+  color: white;
 }
 
 .container {

@@ -1,7 +1,8 @@
 import React from 'react'
 import ForecastWeather from '../ForecastWeather/ForecastWeather'
 import './ForecastContainer.css'
-function ForcastContainer({ data }) {
+function ForcastContainer({ data, dummyData }) {
+  if(data.length === 0) data = dummyData
   return (
     <div className="forecastContainer">
       {data.forecast.daily.map((day, index) => (

@@ -16,9 +16,9 @@ export const isExists = (el) => {
   console.log(el)
   for(let i = 0; i < storage.length; i ++) {
     if(storage[i].daily.coord.lon === el.daily.coord.lon && storage[i].daily.coord.lat === el.daily.coord.lat)
-      return false
+      return true
   }
-  return true
+  return false
 }
 
 export const getStorage = () => {

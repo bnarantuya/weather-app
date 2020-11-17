@@ -20,8 +20,9 @@
 }
 
 .weatherBox .temp {
+  display: flex;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .weatherBox .sub-info {

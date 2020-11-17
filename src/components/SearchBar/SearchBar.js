@@ -1,14 +1,13 @@
 import React, { useState } from "react"
 import './SearchBar.css'
 import { getCurrentWeatherData, getOneCall } from '../api/FetchCalls'
-function SearchBar({ setData, setError }) {
+function SearchBar({ setData }) {
   const [query, setQuery] = useState("")
   const fetchData = async (e) => {
     if (e.key === 'Enter') {
       const data = await getCurrentWeatherData(query)
       const oneCall = await getOneCall(data.coord.lon, data.coord.lat)
       setData({daily: data, forecast: oneCall})
-      setError(false)
     }
   }
 

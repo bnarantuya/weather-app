@@ -1,6 +1,7 @@
 .weatherContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .weatherHistory {
@@ -13,6 +14,11 @@
   cursor: pointer;
 }
 
+.historyTitle {
+  font-size: 30px;
+  padding: 12px;
+}
+
 .weatherTitle {
   width: 120px;
   align-self: center;
@@ -20,5 +26,14 @@
 }
 
 .weatherHistory:hover {
-  background-color: #f5f5f5;
+  background-color: #547f8e;
 }
+
+.removeCity {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+
